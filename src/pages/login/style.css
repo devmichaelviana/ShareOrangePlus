@@ -1,0 +1,100 @@
+main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin:80px;
+}
+
+.container{
+  display: flex;
+  justify-content: center;
+  width: 384px;
+  background: #e4c5b8;
+  border-radius: 20px;
+  padding: 20px;
+  box-shadow: 4px 8px 4px rgba(0, 0, 0, 0.20);
+}
+.wrapperInput{
+  width: 100%;
+  display: flex;
+  gap: 5px;
+  flex-direction: column;  
+}
+
+form {
+  display: flex;
+  gap: 30px;
+  flex-direction: column;
+}
+
+h2 {
+  font-size: 30px;
+  text-align: center;
+  line-height: 40px;
+}
+
+p{
+  text-align: center;
+  line-height: 40px;
+}
+
+input {
+  border: 1px solid #a4a4a4;
+  width: 350px;
+  height: 45px;
+  padding: 20px;
+  border-radius: 10px;  
+}
+
+.esqueciSenha {
+  font-size: 14px;
+  line-height: 24px;
+  text-decoration: underline;
+  color:#272525;
+  
+}
+
+button {
+  width: 150px;
+  height: 50px;
+  padding: 16px ;
+  border-radius: 10px;
+  cursor: pointer;
+  color: #000;
+  background-color: #c0bcbc;
+  margin: auto;
+  border:transparent;
+}
+button:hover{
+  background-color:  #8a8282; 
+  border-radius: 8px;
+ }
+
+.cadastro{
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.cadastro p {
+  font-size: 16px;
+}
+
+.connectLogin {
+  color: #272525;
+  padding: 5px;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.connectLogin:hover{
+ background-color:  #8a8282; 
+ border-radius: 8px;
+}
+
+.alerta{
+  color: #ff0000;
+  font-size: 14px;
+}

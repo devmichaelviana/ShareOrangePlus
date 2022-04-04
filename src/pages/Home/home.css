@@ -10,8 +10,7 @@
   background-color: #febba2;
   display: flex;
   align-items: center;
-  justify-content: space-around;
-  gap: 20px;
+  justify-content:right;
   box-shadow: 4px 8px 4px rgba(0, 0, 0, 0.15);
 }
 
@@ -19,35 +18,17 @@
   color: #fff;
   background-color: #fe4400;
   border: solid 2px #fff;
+  border-radius: 8px;
   padding: 20px;
   text-decoration: none;
   font-size: 18px;
+  margin: 20px;
 }
 
-main{
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  height: 200px;
-}
 
-h1{
-  text-align: center;
-  color: #fe4400;
-}
 
-main > .conect{
-  background-color: #fe4400;
-  border: none;
-  color: #fff;
-  cursor: pointer;
-  display: flex;
-  justify-content: center;
-  width: 100px;
-}
 
-main > button:hover{
-  opacity: 0.7;
-}
+
+
 
 

@@ -1,32 +1,88 @@
 import React from "react";
-import './login.css';
 import { Link } from "react-router-dom";
+import "./style.css";
+import { useFormik } from "formik";
+import * as yup from "yup";
+import { useNavigate } from "react-router-dom";
 
-const Login = () => {
-    return(
-        <section className="login">
-            <Link className="conect" to="/">Tela inicial</Link>
-            <h1>Login</h1>       
-            <div className="logo">
-                <a href="https://www.flaticon.com/free-icons/user" title="user icons">
-                    <img src="https://cdn-icons.flaticon.com/png/512/2354/premium/2354573.png?token=exp=1649084848~hmac=2b8180cb46a52f814d131e43d7291006" alt="login-logo" />
-                </a>
-                {/* fim-da-classe-logo */}
+
+
+const Login = () =>{
+
+  const navigate = useNavigate();
+
+  const formik = useFormik({
+    initialValues: {
+      email: "",
+      password: "",
+    },
+    validationSchema: yup.object({
+      email: yup.string().email('Email Invalido').required("O campo é obrigatório"),
+      password: yup.string().required("O campo é obrigatório"),
+    }),
+    onSubmit: (values) => { 
+      alert(JSON.stringify(values, null, 2))
+      navigate("/perfil")
+    },
+  });
+  
+  return (
+    <>
+      <header className="cabecalho">
+        <div>
+          <Link className="conect" to="/">Tela inicial</Link>  
+        </div> 
+      </header> 
+
+      <main>
+        <div className="container">
+           <form onSubmit={formik.handleSubmit} noValidate >
+            <h2>Seja Bem vindo!</h2>              
+            <div className="wrapperInput">
+            <label htmlFor="">Email</label>
+              <input 
+              type="email"
+              id="email"
+              label="email"
+              errors={formik.touched.email && formik.errors.email}
+              onChange={formik.handleChange}
+              onBlur={formik.handleBlur}
+              value={formik.values.email}
+              placeholder="@email"
+              />
+              {formik.touched.email && formik.errors.email ? (
+                <span className="alerta">{formik.errors.email}</span>
+              ) : null }
             </div>
-            <div className="login-input-email">
-                <input type="text" placeholder="Digite seu email" />
-            </div>
-            <div className="login-input-senha">
-                <input type="password" placeholder="Digite sua senha" />
+              <div className="wrapperInput">
+                <label htmlFor="">Senha</label>
+              <input 
+              type="password"
+              id="password"
+              label="password"
+              errors={formik.touched.password && formik.errors.password}
+              onChange={formik.handleChange}
+              onBlur={formik.handleBlur}
+              value={formik.values.password}
+              placeholder="senha"
+              />
+              {formik.touched.password && formik.errors.password ? (
+                <span className="alerta">{formik.errors.password}</span>
+              ) : null }
+              <span className="esqueciSenha">Esqueci minha senha</span>
             </div>
             <button type="submit">Entrar</button>
-            <div className="botoes-inferiores">
-                <button className="criar-conta">Criar conta</button>
-                <button className="recuperar-senha">Recuperar senha</button>
+            <div className="cadastro">
+              <p>Ainda não tem conta?</p>
+              <Link className="connectLogin" to="/tela">Cadastre-se</Link> 
             </div>
-        {/* fim-da-classe-login */} 
-        </section>
-    )
+          </form>
+        </div>
+      </main>
+    </>
+
+  )
+
 }
 
-export default Login;
+export default Login
