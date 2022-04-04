@@ -17,9 +17,10 @@ function PageHome() {
 
     <main>
       <h1>Essa será a tela principal</h1>
+      <Link className="conect" to="/login">Login</Link>
     </main>
     </>
   )
 }
 
-export default PageHome
+export default PageHome;
