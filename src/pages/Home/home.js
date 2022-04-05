@@ -6,12 +6,9 @@ import { Link } from "react-router-dom"
 function PageHome() {
   return(
     <>
-    <header className="cabecalho">
+    <header className="cabecalho">   
       <div >
-        <Link className="conect" to="/create">Ir na primeira tela</Link>  
-      </div>   
-      <div >
-        <Link className="conect" to="/tela">Ir na segunda tela</Link>  
+        <Link className="conect" to="/tela">Ir na tela de funcionalidades</Link>  
       </div>         
     </header>
 
