@@ -4,12 +4,8 @@ import { useFormik } from "formik";
 import * as yup from "yup";
 import { useNavigate } from "react-router-dom";
 
-
-
 const Login = () =>{
-
   const navigate = useNavigate();
-
   const formik = useFormik({
     initialValues: {
       email: "",
@@ -29,12 +25,11 @@ const Login = () =>{
     <>
       <header className="cabecalho">
       </header> 
-
       <main>
         <div className="container">
            <form onSubmit={formik.handleSubmit} noValidate >
-            <h2 >Technical.<br/><span className="nomeAuxiliar">Share</span></h2>                                 
-            <div className="wrapperInput">
+            <h2>Technical.<br/><span className="segundoNome">Share</span></h2>                                 
+            <div className="input">
             <label htmlFor="">E-mail</label>
               <input 
               type="email"
@@ -50,11 +45,11 @@ const Login = () =>{
                 <span className="alerta">{formik.errors.email}</span>
               ) : null }
             </div>
-              <div className="wrapperInput">
+              <div className="input">
                 <label htmlFor="">Senha</label>
               <input 
-              type="password"
-              id="password"
+              type="senha"
+              id="senha"
               label="password"
               errors={formik.touched.password && formik.errors.password}
               onChange={formik.handleChange}
@@ -69,15 +64,12 @@ const Login = () =>{
             <div className="buttons">
             <button type="submit">Problemas?</button>
             <button type="submit">Entrar</button>      
-            </div>
-               
+            </div>               
           </form>
         </div>
       </main>
     </>
-
   )
-
 }
 
 export default Login
