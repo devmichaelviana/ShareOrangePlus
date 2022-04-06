@@ -30,7 +30,7 @@ const Login = () =>{
            <form onSubmit={formik.handleSubmit} noValidate >
             <h2>Technical.<br/><span className="segundoNome">Share</span></h2>                                 
             <div className="input">
-            <label htmlFor="">E-mail</label>
+            <label className="usuario" htmlFor="">E-mail</label>
               <input 
               type="email"
               id="email"
@@ -46,10 +46,11 @@ const Login = () =>{
               ) : null }
             </div>
               <div className="input">
-                <label htmlFor="">Senha</label>
+                <label className="usuario"
+                htmlFor="">Senha</label>
               <input 
-              type="senha"
-              id="senha"
+              type="password"
+              id="password"
               label="password"
               errors={formik.touched.password && formik.errors.password}
               onChange={formik.handleChange}
@@ -62,8 +63,8 @@ const Login = () =>{
               ) : null }             
             </div>
             <div className="buttons">
-            <button type="submit">Problemas?</button>
-            <button type="submit">Entrar</button>      
+              <button type="submit">Entrar</button>   
+              <p>Esqueceu sua senha?</p>   
             </div>               
           </form>
         </div>
