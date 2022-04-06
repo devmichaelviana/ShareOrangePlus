@@ -8,12 +8,12 @@ const Login = () =>{
   const navigate = useNavigate();
   const formik = useFormik({
     initialValues: {
-      email: "",
+      email: "",    
       password: "",
     },
-    validationSchema: yup.object({
-      email: yup.string().email('Email Invalido').required("O campo é obrigatório"),
-      password: yup.string().required("O campo é obrigatório"),
+    validationSchema: yup.object({     
+      email: yup.string().email('Email Invalido').required("O campo é obrigatório"),    
+      password: yup.string().required("O campo é obrigatório"),      
     }),
     onSubmit: (values) => { 
       alert(JSON.stringify(values, null, 2))
@@ -26,11 +26,25 @@ const Login = () =>{
       <header className="cabecalho">
       </header> 
       <main>
-        <div className="container">
+        <div className="containerCadastro">
            <form onSubmit={formik.handleSubmit} noValidate >
-            <h2>Technical.<br/><span className="segundoNome">Share</span></h2>                                 
-            <div className="input">
-            <label className="usuario" htmlFor="">E-mail</label>
+            <h2>Technical.<br/><span className="segundoNome">Share</span></h2>
+            <p>Insira seus dados aqui</p> 
+            <div className="inputCadastro">
+            <label htmlFor="">Nome</label>
+              <input 
+              type="text"
+              id="name"
+              label="name"
+              onChange={formik.handleChange}
+              onBlur={formik.handleBlur}
+              value={formik.values.name}
+              placeholder="Carlos Sales"
+              />
+            </div>   
+
+            <div className="inputCadastro">
+            <label htmlFor="">E-mail</label>
               <input 
               type="email"
               id="email"
@@ -45,12 +59,23 @@ const Login = () =>{
                 <span className="alerta">{formik.errors.email}</span>
               ) : null }
             </div>
-              <div className="input">
-                <label className="usuario"
-                htmlFor="">Senha</label>
+            <div className="inputCadastro">
+            <label htmlFor="">Telefone</label>
               <input 
-              type="password"
-              id="password"
+              type="number"
+              id="telefone"
+              label="telefone"
+              onChange={formik.handleChange}
+              onBlur={formik.handleBlur}
+              value={formik.values.telefone}
+              placeholder="(88) 7414-5882"
+              />
+            </div>
+              <div className="inputCadastro">
+                <label htmlFor="">Senha</label>
+              <input 
+              type="senha"
+              id="senha"
               label="password"
               errors={formik.touched.password && formik.errors.password}
               onChange={formik.handleChange}
@@ -61,11 +86,7 @@ const Login = () =>{
               {formik.touched.password && formik.errors.password ? (
                 <span className="alerta">{formik.errors.password}</span>
               ) : null }             
-            </div>
-            <div className="buttons">
-              <button type="submit">Entrar</button>   
-              <p>Esqueceu sua senha?</p>   
-            </div>               
+            </div>                                   
           </form>
         </div>
       </main>
