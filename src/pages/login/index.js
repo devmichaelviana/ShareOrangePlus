@@ -1,5 +1,4 @@
 import React from "react";
-import { Link } from "react-router-dom";
 import "./style.css";
 import { useFormik } from "formik";
 import * as yup from "yup";
@@ -29,17 +28,14 @@ const Login = () =>{
   return (
     <>
       <header className="cabecalho">
-        <div>
-          <Link className="conect" to="/">Tela inicial</Link>  
-        </div> 
       </header> 
 
       <main>
         <div className="container">
            <form onSubmit={formik.handleSubmit} noValidate >
-            <h2>Seja Bem vindo!</h2>              
+            <h2 >Technical.<br/><span className="nomeAuxiliar">Share</span></h2>                                 
             <div className="wrapperInput">
-            <label htmlFor="">Email</label>
+            <label htmlFor="">E-mail</label>
               <input 
               type="email"
               id="email"
@@ -68,14 +64,13 @@ const Login = () =>{
               />
               {formik.touched.password && formik.errors.password ? (
                 <span className="alerta">{formik.errors.password}</span>
-              ) : null }
-              <span className="esqueciSenha">Esqueci minha senha</span>
+              ) : null }             
             </div>
-            <button type="submit">Entrar</button>
-            <div className="cadastro">
-              <p>Ainda não tem conta?</p>
-              <Link className="connectLogin" to="/tela">Cadastre-se</Link> 
+            <div className="buttons">
+            <button type="submit">Problemas?</button>
+            <button type="submit">Entrar</button>      
             </div>
+               
           </form>
         </div>
       </main>
