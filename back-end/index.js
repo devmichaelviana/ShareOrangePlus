@@ -19,9 +19,13 @@ app.use(
 app.use(express.json({limit: '50mb'}))
 app.use(cors())
 
-const userRoutes = require('./routes/userRoutes')
+const users = require('./routes/users')
+app.use('/users', users)
+const Mentorias = require('./routes/Mentorias')
+app.use('/montoria', Mentorias)
 
-app.use('/user', userRoutes)
+const fornecedor = require('./routes/fornecedor')
+app.use('/fornecedor', fornecedor)
 
 // router.get('/', (req, res) => {
 //     // mostrar requisição
