@@ -6,7 +6,7 @@ const Users = require('../models/Users')
 
 router.post('/auth/register', async (req, res) => {
     // req.body
-    const {name, email, senha, avatar, telefone, areaAtuacao, mentor, mentorado, data, mentorias} = req.body
+    const {name, email, senha, avatar, telefone, areaAtuacao, mentor, mentorado, data, habilidades} = req.body
     const users = {
         name,
         email,
@@ -17,7 +17,7 @@ router.post('/auth/register', async (req, res) => {
         mentor,
         mentorado,
         data: new Date(),
-        mentorias
+        habilidades
     }
 
     if(!name){
@@ -71,10 +71,10 @@ router.get('/mentores', async (req, res) => {
     }
 })
 // mostra o perfil do usuario 
-router.get('/:name', async (req, res) => {
-    const name = req.params.name
+router.get('/:habilidades', async (req, res) => {
+    const habilidades = req.params.habilidades
     try{
-        const people = await Users.findOne({name: name})
+        const people = await Users.find({ habilidades: { $all: [habilidades] } })
 
         res.status(200).json(people)
     } catch (error){
@@ -83,13 +83,11 @@ router.get('/:name', async (req, res) => {
 })
 
 router.get('/usuarios', async (req, res) => {
-   
     // Se houver query string, desvia para busca personalizada
     if(Object.keys(req.query).length > 0) {
        busca(req, res)
     }
     else {
-    
        try {
           // find() sem parâmetros: retorna todos
           const lista = await Users.find().populate('mentorias')

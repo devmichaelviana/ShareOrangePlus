@@ -19,6 +19,17 @@ router.post('/', async (req, res) =>{
     }
 } )
 
+router.post('/:id/mentoria', async (req, res) =>{
+    const id = req.params.id
+    try{
+        const people = await Mentorias.findOne({name: id})
+
+        res.status(200).json(people)
+    } catch (error){
+        res.status(500).json({message: error})
+    }
+})
+
 router.get('/', async function (req, res) {
    
    if(Object.keys(req.query).length > 0) { // Se houver query string
@@ -47,9 +58,6 @@ async function busca(req, res) {
     
     // $options: 'i' => case insensitive
     criterio[atrib] = { $regex: valor, $options: 'i'}
- 
-    console.log('Critério:')
-    console.log(criterio)
  
     try {
        const lista = await Mentorias.find(criterio)

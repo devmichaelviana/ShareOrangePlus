@@ -36,10 +36,8 @@ const esquema = mongoose.Schema({
     data: {
        type: Date
     },
-    mentorias: {
-        type: mongoose.ObjectId,
-        ref: 'Mentorias',
-    }
+    habilidades: [
+    ]
  })
 
  module.exports = mongoose.model('Users', esquema, 'users')
