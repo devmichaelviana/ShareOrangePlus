@@ -40,7 +40,7 @@ const Login = () =>{
               onChange={formik.handleChange}
               onBlur={formik.handleBlur}
               value={formik.values.email}
-              placeholder="@email"
+              placeholder="seuemail@email.com.br"
               />
               {formik.touched.email && formik.errors.email ? (
                 <span className="alerta">{formik.errors.email}</span>
@@ -57,7 +57,7 @@ const Login = () =>{
               onChange={formik.handleChange}
               onBlur={formik.handleBlur}
               value={formik.values.password}
-              placeholder="senha"
+              placeholder="********"
               />
               {formik.touched.password && formik.errors.password ? (
                 <span className="alerta">{formik.errors.password}</span>
