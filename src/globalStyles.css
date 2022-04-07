@@ -13,8 +13,6 @@ html, body, #root {
 }
 body {
   -webkit-font-smoothing: antialiased;
-  background-image:url("././assets/teladelogin.png"); 
- /* background-repeat: no-repeat; */
 }
 
 a {
@@ -23,7 +21,6 @@ a {
 
 ul, li {
 list-style: none;
-
 }
 
 img {
