@@ -4,6 +4,7 @@
   flex-grow: 1;
   justify-content: center;
   align-items: center;
+  background:#FB6028;
 }
 .container{
   display: flex;
@@ -11,13 +12,13 @@
   flex-direction: column;
 }
 .wrapper{
-display: flex;
-flex-direction: column;
-align-items: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   border-radius: 20px;
   width: 500px;
   height: 656px; 
-  margin: 100px 0;
+  margin: 100px 0;  
   background: #FFFFFF;
   border: 1px solid rgba(0, 0, 0, 0.15);
   box-sizing: border-box;
@@ -73,7 +74,7 @@ form {
 
 .tituloInput{
   display: flex;
-align-items: center;
+  align-items: center;
   color:#000;
   font-family: 'Inter';
   font-style: normal;
@@ -81,7 +82,6 @@ align-items: center;
   font-size: 25px;
   line-height: 30px;
   margin-left: 20px;
-
 }
 
 input {
@@ -128,3 +128,4 @@ button {
   justify-content: center;
   flex-shrink: 0;
 }
+
