@@ -63,7 +63,7 @@ router.post('/auth/login', async (req, res) =>{
 // mostra todos os monitores
 router.get('/mentores', async (req, res) => {
     try{
-        const people = await Users.find({mentor: false})
+        const people = await Users.find({mentor: true})
 
         res.status(200).json(people)
     } catch (error){
@@ -71,7 +71,43 @@ router.get('/mentores', async (req, res) => {
     }
 })
 // mostra o perfil do usuario 
-router.get('/:habilidades', async (req, res) => {
+router.get('/:email', async (req, res) => {
+    const email = req.params.email
+    try{
+        const people = await Users.findOne({email: email} )
+
+        res.status(200).json(people)
+    } catch (error){
+        res.status(500).json({ error: error})
+    }
+})
+
+// editar perfil do usuario
+
+router.patch('/atualizar/:id', async (req, res) => {
+    const id = req.params.id
+    const {name, email, senha, avatar, telefone, areaAtuacao, mentor, mentorado, habilidades} = req.body
+    const users = {
+        name,
+        email,
+        senha,
+        avatar,
+        telefone,
+        areaAtuacao,
+        mentor,
+        mentorado,
+        habilidades
+    }
+    try{
+        await Users.updateOne({_id: id},users)
+        res.status(200).json(users)
+    } catch(error){
+        res.status(500).json({ error: error })
+    }
+})
+
+
+router.get('/buscar/:habilidades', async (req, res) => {
     const habilidades = req.params.habilidades
     try{
         const people = await Users.find({ habilidades: { $all: [habilidades] } })
