@@ -35,7 +35,7 @@ router.post('/auth/register', async (req, res) => {
         await Users.create(users)
         res.status(201).json({message: 'usuario criado com sucesso!'})
     } catch (error){
-        res.status(500).json({message: 'error'})
+        res.status(500).json({message: 'nao foi possivel criar usuario!'})
     }
 }) 
 
@@ -45,7 +45,7 @@ router.post('/auth/login', async (req, res) =>{
     const usuario = await Users.findOne({ email: email })
 
     if(!usuario || usuario.senha !== senha){
-        return res.status(404).json({ message: 'email invalid' })
+        return res.status(404).json({ message: 'login invalido!' })
     }
     res.status(200).json({message: 'usuario autenticado!'})
 

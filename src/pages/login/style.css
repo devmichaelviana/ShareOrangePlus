@@ -1,38 +1,37 @@
-body{
-  background-image: url('../../assets/teladelogin.png');
-  background-color: #fb6028;
-  background-position: left center;
-  background-repeat: no-repeat;
-  background-size: 400px 400px;
+.main{
+  display: flex;
+  width: 100%;
+  flex-grow: 1;
+  justify-content: center;
+  align-items: center;
 }
-
 .container{
   display: flex;
-  justify-content: center;
-  border-radius: 20px;
-  padding: 20px;
-}
-
-.input{
-  width: 100%;
-  display: flex;
-  gap: 5px;
-  flex-direction: column;  
-}
-
-form {
-  display: flex;
-  gap: 30px;
+  height: 100%;
   flex-direction: column;
 }
+.wrapper{
+display: flex;
+flex-direction: column;
+align-items: center;
+  border-radius: 20px;
+  width: 500px;
+  height: 656px; 
+  margin: 100px 0;
+  background: #FFFFFF;
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  box-sizing: border-box;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 15px;
+}
 
-h2 {
+.title{
   font-family: 'Inter';
   font-weight: 500;
   font-size: 40px;
   line-height: 48px;
-  color: #ffffff;
-  margin-left: 50px;
+  color: #FE5517;
+margin: 54px 0px 64px 0px;
 }
 
 .segundoNome{
@@ -40,56 +39,71 @@ h2 {
   font-weight: 800;
   font-size: 40px;
   line-height: 48px;
-  color: #ffffff;
+  color: #FE5517;
 }
 
-p{
+.input{
+  display: flex;
+  gap: 5px;
+  flex-direction: column;  
+ 
+}
+
+form {
+  display: flex;
+  gap: 39px;
+  flex-direction: column;
+  align-items: center;
+}
+
+
+
+.esqueceSenha{
   font-family: 'Inter';
   font-style: normal;
-  font-weight: 500;
-  font-size: 10px;
-  line-height: 12px;
+  font-weight: 400;
+  font-size: 17px;
+  line-height: 21px;
   display: flex;
   align-items: center;
   text-align: center;
   margin-top:5px;  
-  color: #ffffff;
+  color: #030303;
 }
 
-.usuario{
-  color:#fff;
+.tituloInput{
+  display: flex;
+align-items: center;
+  color:#000;
   font-family: 'Inter';
   font-style: normal;
   font-weight: 400;
-  font-size: 12px;
-  line-height: 15px;
-  margin-left: 40px;
-  margin-bottom: 10px;
+  font-size: 25px;
+  line-height: 30px;
+  margin-left: 20px;
+
 }
 
 input {
   width: 319px;
   height: 50px;
-  left: 21px;
-  top: 295px;
   background: #FFFFFF;
   border: 1px solid #C4C4C4;
-  box-sizing: border-box;
   border-radius: 30px;
-  width: 319px;
-  height: 50px;
-  margin-left: 21px;
-  padding-left: 15px;
+  padding: 15px;
+  font-size: 14px;
+  line-height: 17px;
+  color: #C4C4C4;
 }
 
 button {
-  width: 95px;
-  height: 27px;
+  width: 187px;
+  height: 45px;
   margin-top: 50px;  
-  background: #fff;
+  background: #FE662E;
   border-radius: 20px;
   cursor: pointer;
-  color: #fe662e; 
+  color: #fff; 
   border:transparent;
 }
 
@@ -100,13 +114,17 @@ button {
   align-items: center;  
 }
 
-.buttons > p{
-  margin-top: 20px;
-  cursor: pointer;
-}
-
 .alerta{
   color: #ff0000;
   font-size: 14px;
-  margin-left: 50px;
+}
+.rodape{
+  width: 100%;
+  display: flex;
+  height: 40px;  
+  background: #FFFFFF;
+  border: 1px solid rgba(0, 0, 0, 0.25);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  justify-content: center;
+  flex-shrink: 0;
 }

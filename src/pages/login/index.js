@@ -3,6 +3,7 @@ import "./style.css";
 import { useFormik } from "formik";
 import * as yup from "yup";
 import { useNavigate } from "react-router-dom";
+import  LogoFCamara  from "../../assets/logoFcamara.png"
 
 const Login = () =>{
   const navigate = useNavigate();
@@ -13,7 +14,7 @@ const Login = () =>{
     },
     validationSchema: yup.object({
       email: yup.string().email('Email Invalido').required("O campo é obrigatório"),
-      password: yup.string().required("O campo é obrigatório"),
+      password: yup.string().required("O campo é obrigatório").min(8, "Mínimo de 8 caracteres").max(12, "Máximo de 12 caracteres"),
     }),
     onSubmit: (values) => { 
       alert(JSON.stringify(values, null, 2))
@@ -22,15 +23,15 @@ const Login = () =>{
   });
   
   return (
-    <>
-      <header className="cabecalho">
-      </header> 
-      <main>
-        <div className="container">
+    <div className="container">      
+      <main className="main">
+        
+        <div className="wrapper">
+        <h2 className="title">Technical.<br/><span className="segundoNome">Share</span></h2>    
            <form onSubmit={formik.handleSubmit} noValidate >
-            <h2>Technical.<br/><span className="segundoNome">Share</span></h2>                                 
+                                      
             <div className="input">
-            <label className="usuario" htmlFor="">E-mail</label>
+            <label className="tituloInput" htmlFor="">E-mail</label>
               <input 
               type="email"
               id="email"
@@ -39,14 +40,14 @@ const Login = () =>{
               onChange={formik.handleChange}
               onBlur={formik.handleBlur}
               value={formik.values.email}
-              placeholder="@email"
+              placeholder="seuemail@email.com.br"
               />
               {formik.touched.email && formik.errors.email ? (
                 <span className="alerta">{formik.errors.email}</span>
               ) : null }
             </div>
               <div className="input">
-                <label className="usuario"
+                <label className="tituloInput"
                 htmlFor="">Senha</label>
               <input 
               type="password"
@@ -56,7 +57,7 @@ const Login = () =>{
               onChange={formik.handleChange}
               onBlur={formik.handleBlur}
               value={formik.values.password}
-              placeholder="senha"
+              placeholder="********"
               />
               {formik.touched.password && formik.errors.password ? (
                 <span className="alerta">{formik.errors.password}</span>
@@ -64,13 +65,18 @@ const Login = () =>{
             </div>
             <div className="buttons">
               <button type="submit">Entrar</button>   
-              <p>Esqueceu sua senha?</p>   
+              <p className="esqueceSenha">Esqueceu sua senha?</p>   
             </div>               
           </form>
         </div>
+      
       </main>
-    </>
+        <div className="rodape">
+          <img src={LogoFCamara} alt="" />
+        </div>
+      
+    </div>
   )
 }
 
-export default Login;
+export default Login
