@@ -3,7 +3,8 @@ import "./style.css";
 import { useFormik } from "formik";
 import * as yup from "yup";
 import { useNavigate } from "react-router-dom";
-import  LogoFCamara  from "../../assets/logoFcamara.png"
+import  LogoFCamara  from "../../assets/logoFcamara.png";
+
 
 const Login = () =>{
   const navigate = useNavigate();
@@ -24,8 +25,7 @@ const Login = () =>{
   
   return (
     <div className="container">      
-      <main className="main">
-        
+      <main className="main">  
         <div className="wrapper">
         <h2 className="title">Technical.<br/><span className="segundoNome">Share</span></h2>    
            <form onSubmit={formik.handleSubmit} noValidate >
@@ -72,9 +72,8 @@ const Login = () =>{
       
       </main>
         <div className="rodape">
-          <img src={LogoFCamara} alt="" />
-        </div>
-      
+          <img  className="logoFCamara"src={LogoFCamara} alt="" />
+        </div>      
     </div>
   )
 }
