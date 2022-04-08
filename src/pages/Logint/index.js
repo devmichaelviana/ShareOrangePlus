@@ -65,7 +65,7 @@ const Login = () =>{
             </div>
             <div className="buttons">
               <button type="submit">Entrar</button>   
-              <p className="esqueceSenha">Esqueceu sua senha?</p>   
+              <p className="esqueceSenha">Esqueceu sua senha??</p>   
             </div>               
           </form>
         </div>
