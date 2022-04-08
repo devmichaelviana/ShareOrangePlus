@@ -1,0 +1,33 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: Arial;
+}
+
+html, body{
+    background-color: #fb6028;
+    color: white;
+    height: 100%;
+}
+
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: bottom;
+    height: 900px;
+}
+
+.formulario{
+    width: 500px;
+    height: 800px;
+    background-color: white;
+    border-radius: 10px;
+    color: #fb6028;
+    text-align: center;
+    padding: 50px 0;
+}
+
+.insira__nome{
+    color: #303030;
+    margin-top: 30px;
+}
