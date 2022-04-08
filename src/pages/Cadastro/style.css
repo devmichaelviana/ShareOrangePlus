@@ -5,18 +5,20 @@
   justify-content: center;
   align-items: center;
 }
+
 .container{
   display: flex;
   height: 100%;
   flex-direction: column;
 }
-.wrapper{
-display: flex;
-flex-direction: column;
-align-items: center;
+
+.wrapperCadastro{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   border-radius: 20px;
-  width: 500px;
-  height: 656px; 
+  width: 581px;
+  height: 830px;
   margin: 100px 0;
   background: #FFFFFF;
   border: 1px solid rgba(0, 0, 0, 0.15);
@@ -90,10 +92,6 @@ input {
   background: #FFFFFF;
   border: 1px solid #C4C4C4;
   border-radius: 30px;
-  padding: 15px;
-  font-size: 14px;
-  line-height: 17px;
-  color: #C4C4C4;
 }
 
 button {
@@ -128,3 +126,21 @@ button {
   justify-content: center;
   flex-shrink: 0;
 }
+
+.texto{
+  width: 270px;
+height: 25px;
+margin-left: 5px;
+top: 261px;
+color: #404098;
+font-family: 'Inter';
+font-style: normal;
+font-weight: 500;
+font-size: 20px;
+line-height: 24px;
+}
+
+.fundoTela{
+ margin-right:0px
+}
+
