@@ -6,7 +6,7 @@ const Users = require('../models/Users')
 
 router.post('/auth/register', async (req, res) => {
     // req.body
-    const {name, email, senha, avatar, telefone, areaAtuacao, mentor, mentorado, data, habilidades} = req.body
+    const {name, email, senha, avatar, telefone, areaAtuacao, mentor, mentorado, habilidades} = req.body
     const users = {
         name,
         email,
@@ -35,29 +35,20 @@ router.post('/auth/register', async (req, res) => {
         await Users.create(users)
         res.status(201).json({message: 'usuario criado com sucesso!'})
     } catch (error){
-        res.status(500).json({message: 'error'})
+        res.status(500).json({message: 'nao foi possivel criar usuario!'})
     }
 }) 
 
 router.post('/auth/login', async (req, res) =>{
     const {email, senha} = req.body
 
-    const emailExiste = await Users.findOne({ email: email})
+    const usuario = await Users.findOne({ email: email })
 
-    if(!emailExiste){
-        return res.status(404).json({ message: 'email invalid' })
+    if(!usuario || usuario.senha !== senha){
+        return res.status(404).json({ message: 'login invalido!' })
     }
-    const senhaExiste = await Users.findOne({ senha: senha})
+    res.status(200).json({message: 'usuario autenticado!'})
 
-    if(!senhaExiste){
-        return res.status(422).json({ message: 'senha invalid'})
-    }
-
-    try{
-        res.status(200).json({message: 'usuario autenticado!'})
-    } catch (error){
-        res.status(500).json({message: 'error'})
-    }
 } )
 
 // mostra todos os monitores

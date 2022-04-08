@@ -1,7 +1,10 @@
 const express = require('express')
 const app = express()
 const cors = require('cors')
+require('dotenv').config()
 const mongoose = require('mongoose')
+const users = require('./routes/users')
+const Mentorias = require('./routes/mentorias')
 
 
 
@@ -17,12 +20,19 @@ app.use(
 app.use(express.json({limit: '50mb'}))
 app.use(cors())
 
-const users = require('./routes/users')
+
 app.use('/users', users)
-const Mentorias = require('./routes/Mentorias')
 app.use('/montoria', Mentorias)
 
-mongoose.connect('mongodb+srv://HackathonFCamara:v6oqXPB7xz8s3qgo@hackathon-fcamar.y71xw.mongodb.net/myFirstDatabase?retryWrites=true&w=majority')
+
+
+const url = `mongodb+srv://${process.env.DATABASE_USER}:${process.env.DATABASE_SENHA}@hackathon-fcamar.y71xw.mongodb.net/myFirstDatabase?retryWrites=true&w=majority`
+
+mongoose.connect(url,
+{
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+  })
 .then(() => {
     console.log('connectamos ao mongoDB')
     app.listen(8080)
