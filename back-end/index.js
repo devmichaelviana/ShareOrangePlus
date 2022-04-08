@@ -13,23 +13,14 @@ app.use(
 
 )
 
-
-
 // rotas da API 
 app.use(express.json({limit: '50mb'}))
 app.use(cors())
 
-const userRoutes = require('./routes/userRoutes')
-
-app.use('/user', userRoutes)
-
-// router.get('/', (req, res) => {
-//     // mostrar requisição
-   
-//     res.json({message:'oi express!'})
-//    })
-
-
+const users = require('./routes/users')
+app.use('/users', users)
+const Mentorias = require('./routes/Mentorias')
+app.use('/montoria', Mentorias)
 
 mongoose.connect('mongodb+srv://HackathonFCamara:v6oqXPB7xz8s3qgo@hackathon-fcamar.y71xw.mongodb.net/myFirstDatabase?retryWrites=true&w=majority')
 .then(() => {
