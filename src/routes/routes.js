@@ -1,8 +1,8 @@
 import React from "react";
 import { Routes, Route } from "react-router-dom";
-import Home from "../pages/Home/home";
-import PageLogin from "../pages/login";
-import Page2 from "../pages/tela2";
+import Home from "../pages/Home";
+import PageLogin from "../pages/Login";
+import PageCadastro from "../pages/Cadastro";
 
 
 function routes() {
@@ -10,7 +10,7 @@ function routes() {
     <Routes>
       <Route  path="/" element={<Home />}/>
       <Route  path="/login" element={<PageLogin />}/>
-      <Route  path="/tela" element={<Page2/>}/>        
+      <Route  path="/cadastro" element={<PageCadastro/>}/>        
     </Routes>
   )
 }
