@@ -117,46 +117,5 @@ router.get('/buscar/:habilidades', async (req, res) => {
         res.status(500).json({ error: error})
     }
 })
-
-router.get('/usuarios', async (req, res) => {
-    // Se houver query string, desvia para busca personalizada
-    if(Object.keys(req.query).length > 0) {
-       busca(req, res)
-    }
-    else {
-       try {
-          // find() sem parâmetros: retorna todos
-          const lista = await Users.find().populate('mentorias')
-          res.send(lista) // O status HTTP 200 (OK) é implícito
-       }
-       catch(erro) {
-          console.log(erro)
-          res.status(500).send(erro)
-       }
-    }
- } )
- async function busca (req, res) {
-    
-    let criterio = {}
-    let atrib = Object.keys(req.query)[0]
-    let valor = Object.values(req.query)[0]
-    
-    // /i no final da expressão regular significa que a
-    // busca será case insensitive
-    criterio[atrib] = { $regex: valor, $options: 'i' }
-    console.log(criterio)
-    
-    try{
-       let lista = await Users.find(criterio)
-       res.send(lista)
-    }
-    catch(erro) {
-       console.log(erro)
-       res.status(500).send(erro)
-    }
  
- }
- 
-
-
 module.exports = router
