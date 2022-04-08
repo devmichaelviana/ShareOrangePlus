@@ -1,29 +1,150 @@
-*{
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
 
-.cabecalho{
-  width: 100%;
-  height: 150px;
-  background-color: #febba2;
+
+
+.wrapperHome{
+  width: 95%;
+  max-width: 1440px;
   display: flex;
+  flex-direction: column;
+  justify-content: center;
   align-items: center;
-  justify-content:right;
-  box-shadow: 4px 8px 4px rgba(0, 0, 0, 0.15);
+
+  padding-top: 5%;
 }
 
-.conect {
-  color: #fff;
-  background-color: #fe4400;
-  border: solid 2px #fff;
-  border-radius: 8px;
-  padding: 20px;
+.containerHome{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  height: 100vh;
+}
+
+.apresentacao{
+  display: flex;
+  justify-content: space-between;
+ flex-direction: column;
+ width: 100%;
+ gap: 30px;
+
+}
+
+.tituloApresentacao{
+font-family: 'Inter';
+font-style: normal;
+font-weight: 800;
+font-size: 36px;
+line-height: 100%;
+color: #FB6028;
+
+}
+
+.textoApresentacao{
+font-family: 'Inter';
+font-style: normal;
+font-weight: 700;
+font-size: 36px;
+color: #29292B;
+}
+
+.containerTexto{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.informacoes{
+  display: flex;
+  width: 100%;
+  justify-content: space-evenly;
+
+  height: 425px;
+  padding: 27px 0px;
+}
+
+.ItemMenu{
+  display: flex;
+  flex-direction: column;
+  width: 226px;
+  height: 100%;
+  justify-content: space-between;
+}
+.titleItem{
+text-align: center;
+font-size: 18px;
+font-weight: 400;
+
+}
+
+.irCadastro{
+  display: flex;
+  height: 180px;
+  justify-content: space-evenly;
+  flex-direction: column;
+  align-items: center;
+}
+
+
+.laranja{
+color: #FB6028;
+
+}
+
+.cadastro {
+  color: #FE662E;;
+  background-color: #fff;
+  border-radius: 20px;
+  padding: 10px 30px;
   text-decoration: none;
   font-size: 18px;
-  margin: 20px;
+  margin-right: 10px;
+  width: 95px;
+  height: 27px;
 }
+
+.cadastro {
+font-family: 'Inter';
+font-style: normal;
+font-weight: 600;
+width: 187px;
+height: 45px;
+border-radius: 20px;
+font-size: 20px;
+background-color:#FB6028;
+display: flex;
+align-items: center;
+color: #fff; 
+display: flex;
+justify-content: center; 
+}
+
+.titleLogin{
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 17px;
+  line-height: 21px;
+}
+
+
+.login {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 17px;
+  line-height: 21px;
+  color:#FB6028;
+  }
+.loginTop {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 29px;
+  color: #FB6028;
+  }
+ 
 
 
 
