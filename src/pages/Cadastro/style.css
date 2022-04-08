@@ -4,6 +4,10 @@
   flex-grow: 1;
   justify-content: center;
   align-items: center;
+  background:url(../../assets/fundoTela.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 .container{
