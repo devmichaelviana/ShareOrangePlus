@@ -2,7 +2,7 @@ import React from "react";
 import { Routes, Route } from "react-router-dom";
 import Home from "../pages/Home";
 import PageLogin from "../pages/Logint";
-import PageCadastro from "../pages/Cadastro";
+import PageCadastro from "../pages/cadastro";
 
 
 function routes() {
