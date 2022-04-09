@@ -52,7 +52,7 @@ const Login = () =>{
   
   return (
     <div className="container">      
-      <main className="main">  
+      <main className="main__login">  
         <div className="wrapper">
         <h2 className="title">Technical.<br/><span className="segundoNome">Share</span></h2>    
            <form onSubmit={formik.handleSubmit} noValidate >
@@ -67,7 +67,6 @@ const Login = () =>{
               onChange={formik.handleChange}
               onBlur={formik.handleBlur}
               value={formik.values.email}
-              placeholder="seuemail@email.com.br"
               />
               {formik.touched.email && formik.errors.email ? (
                 <span className="alerta">{formik.errors.email}</span>
@@ -84,7 +83,6 @@ const Login = () =>{
               onChange={formik.handleChange}
               onBlur={formik.handleBlur}
               value={formik.values.password}
-              placeholder="********"
               />
               {formik.touched.password && formik.errors.password ? (
                 <span className="alerta">{formik.errors.password}</span>
