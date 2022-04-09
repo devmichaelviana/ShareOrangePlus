@@ -1,0 +1,168 @@
+.centralizar{
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 40px 2%;
+}
+
+.sangue__laranja, .chamada{
+  display: flex;
+  justify-content: space-between;
+}
+
+.sangue__laranja h1{
+  color: #FB6028;
+  font-weight: bold;
+  font-size: 36px;
+}
+
+.sangue__laranja img{
+  position: absolute;
+  top: 0px;
+  right: 0px;
+}
+
+.chamada{
+  margin-top: 50px;
+}
+
+.chamada p{
+  font-size: 30px;
+  width: 600px;
+  font-weight: bold;
+}
+
+.apresentacao{
+  margin-top: 150px;
+  display: flex;
+  justify-content: space-around;
+}
+
+.img__texto{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 300px;
+}
+
+.img__texto .img1, .img__texto .img2, .img__texto .img3{
+  width: calc((300px / 6) * 5);
+  height: calc((400px / 6) * 5);
+}
+
+.img__texto p{
+  width: 300px;
+  margin-top: 30px;
+  line-height: 2em;
+}
+
+.strong1{
+  color: #FB6028;
+}
+
+.loginTop{
+  color: #FB6028;
+  font-weight: bold;
+}
+
+.cadastrar__centralizar{
+  margin-top: 100px;
+  display: flex;
+  justify-content: center;
+}
+
+.cadastrar{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.cadastro{
+  background-color: #FB6028;
+  color: #fff;
+  border: none;
+  text-align: center;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.cadastrar p{
+  margin-top: 50px;
+}
+
+footer{
+  display: flex;
+  justify-content: center;
+  margin-top: 100px;
+  border-top: 2px solid #c0c0c0;
+  padding-top: 10px;
+}
+
+@media screen and (max-width: 940px){
+  .chamada p{
+    font-size: 24px;
+    width: 500px;
+  }
+  
+  .apresentacao{
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .img__texto{
+    flex-direction: column;
+    width: 500px;
+  }
+  
+  .img__texto .img1, .img__texto .img2, .img__texto .img3{
+    width: calc((500px / 6) * 5);
+    height: calc((666px / 6) * 5);
+  }
+  
+  .img__texto p{
+    width: 500px;
+  }
+}
+
+@media screen and (max-width: 667px){
+  .chamada p{
+    width: 400px;
+  }
+}
+
+@media screen and (max-width: 510px){
+  .centralizar{
+    width: 250px;
+  }
+
+  .loginTop{
+    margin-top: 50px;
+  }
+  
+  .chamada{
+    flex-direction: column;
+    align-items: center;
+    width: 300px;
+  }
+
+  .img__texto{
+    width: 300px;
+  }
+  
+  .img__texto .img1, .img__texto .img2, .img__texto .img3{
+    width: calc((300px / 6) * 5);
+    height: calc((400px / 6) * 5);
+  }
+  
+  .img__texto p{
+    width: 300px;
+  }
+
+  .sangue__laranja{
+    justify-content: center;
+  }
+
+  .sangue__laranja img{
+    display: none;
+  }
+}
