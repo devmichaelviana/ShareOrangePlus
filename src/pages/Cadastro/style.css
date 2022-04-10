@@ -98,7 +98,7 @@ input {
   border-radius: 30px;
 }
 
-button {
+.buttonCadastro {
   width: 187px;
   height: 45px;
   margin-top: 50px;  
