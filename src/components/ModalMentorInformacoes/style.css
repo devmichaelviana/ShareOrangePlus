@@ -2,6 +2,7 @@
   width: 380px;
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
   min-height: 430px;
 }
 .wrapperModal{
