@@ -1,4 +1,4 @@
-.main{
+.main-cadastro{
   display: flex;
   width: 100%;
   flex-grow: 1;
@@ -9,6 +9,8 @@
   background-repeat: no-repeat;
   background-position: center;
 }
+
+
 
 .container{
   display: flex;
@@ -22,7 +24,7 @@
   align-items: center;
   border-radius: 20px;
   width: 581px;
-  height: 830px;
+  height: 90%;
   margin: 100px 0;
   background: #FFFFFF;
   border: 1px solid rgba(0, 0, 0, 0.15);
@@ -37,7 +39,7 @@
   font-size: 40px;
   line-height: 48px;
   color: #FE5517;
-margin: 54px 0px 64px 0px;
+margin: 54px 0px 14px 0px;
 }
 
 .segundoNome{
@@ -57,7 +59,7 @@ margin: 54px 0px 64px 0px;
 
 form {
   display: flex;
-  gap: 39px;
+  gap: 9px;
   flex-direction: column;
   align-items: center;
 }
@@ -84,7 +86,7 @@ align-items: center;
   font-family: 'Inter';
   font-style: normal;
   font-weight: 400;
-  font-size: 25px;
+  font-size: 15px;
   line-height: 30px;
   margin-left: 20px;
 
@@ -146,5 +148,130 @@ line-height: 24px;
 
 .fundoTela{
  margin-right:0px
+}
+
+.select{
+  width: 319px;
+  height: 50px;
+  background: #FFFFFF;
+  border: 1px solid #C4C4C4;
+  border-radius: 30px;
+}
+
+
+.checkbox{
+  width: 15px;
+  height: 15px;
+  color: #ff0000;
+  margin-left: 15px;
+}
+
+.inputCheck{
+  margin-top: 10px;
+  text-align: center;
+}
+
+.olho {
+  cursor: pointer;
+  width: 35px;
+  left: 280px;
+  color: #DC4A38;
+  margin-top: 15px;
+  font-size: 18px;
+  position: absolute;
+}
+.mostrarSenha{
+  display: flex;
+}
+
+.inputSenha{
+  left: 365px;
+  position: sticky;
+}
+.areaMentor{
+  display: none;
+}
+
+input[type=checkbox]{
+	height: 0;
+	width: 0;
+	visibility: hidden;
+}
+
+.linkedin{
+  color: #0077B7;
+  font-size: 30px;
+  margin: 20px;
+}
+
+.gmail{
+  color: #DC4A38;
+  font-size: 30px;
+  margin: 20px;
+}
+
+.icons{
+  display: flex;
+  justify-content:center;
+}
+
+.labelCheckbox{
+  margin-left: 20px;
+}
+
+.input-area-mentor{
+  margin-top: 15px;
+}
+.Toggle {
+	cursor: pointer;
+	text-indent: -9999px;
+	width: 52px;
+	height: 27px;
+  right: 73px;
+	background: grey;
+	float: right;
+	border-radius: 100px;
+	position: relative;
+  top: -4px;
+}
+
+.Toggle:after {
+	content: '';
+	position: absolute;
+	top: 3px;
+	left: 3px;
+	width: 20px;
+	height: 20px;
+	background: #fff;
+	border-radius: 90px;
+	transition: 0.3s;
+}
+
+input:checked + .Toggle {
+	background: #FE662E !important;
+}
+
+input:checked + label:after {
+	left: calc(100% - 5px);
+	transform: translateX(-100%);
+}
+
+label:active:after {
+	width: 45px;
+}
+@media (max-width: 600px) {
+  .inputSenha{
+    left: 0;
+  }
+}
+
+@media (max-width: 500px) {
+  .main-cadastro{
+    background: #fff;
+  }
+  .wrapperCadastro{
+    border: none;
+    box-shadow: none;
+  }
 }
 

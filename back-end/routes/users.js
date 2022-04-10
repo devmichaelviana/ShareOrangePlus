@@ -6,21 +6,17 @@ const Users = require('../models/Users')
 
 router.post('/auth/register', async (req, res) => {
     // req.body
-    const {name, email, senha, avatar, telefone, areaAtuacao, mentor, mentorado, habilidades} = req.body
+    const {nome,email,senha,contato,habilidades} = req.body
     const users = {
-        name,
+        nome,
         email,
-        senha,
-        avatar,
-        telefone,
-        areaAtuacao,
-        mentor,
-        mentorado,
+        senha,   
+        contato,
+        habilidades,
         data: new Date(),
-        habilidades
     }
 
-    if(!name){
+    if(!nome){
        res.status(422).json({error: 'o name é obrigatorio!'}) 
        return
     }
@@ -33,7 +29,9 @@ router.post('/auth/register', async (req, res) => {
 
     try{
         await Users.create(users)
-        res.status(201).json({message: 'usuario criado com sucesso!'})
+        const usuario = await Users.findOne({ email: email })
+
+        res.status(201).json({usuario})
     } catch (error){
         res.status(500).json({message: 'nao foi possivel criar usuario!'})
     }
