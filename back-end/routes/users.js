@@ -6,22 +6,18 @@ const Users = require('../models/Users')
 
 router.post('/auth/register', async (req, res) => {
     // req.body
-    const {name, email, senha, avatar, telefone, areaAtuacao, mentor, mentorado, habilidades} = req.body
+    const {nome,email,senha,contato,habilidades} = req.body
     const users = {
-        name,
+        nome,
         email,
-        senha,
-        avatar,
-        telefone,
-        areaAtuacao,
-        mentor,
-        mentorado,
+        senha,   
+        contato,
+        habilidades,
         data: new Date(),
-        habilidades
     }
 
-    if(!name){
-       res.status(422).json({error: 'o name é obrigatorio!'}) 
+    if(!nome && !email && !senha) {
+       res.status(400).json({error: 'campos é obrigatorio!'}) 
        return
     }
 
@@ -33,7 +29,9 @@ router.post('/auth/register', async (req, res) => {
 
     try{
         await Users.create(users)
-        res.status(201).json({message: 'usuario criado com sucesso!'})
+        const usuario = await Users.findOne({ email: email })
+
+        res.status(201).json({usuario})
     } catch (error){
         res.status(500).json({message: 'nao foi possivel criar usuario!'})
     }
@@ -47,7 +45,7 @@ router.post('/auth/login', async (req, res) =>{
     if(!usuario || usuario.senha !== senha){
         return res.status(404).json({ message: 'login invalido!' })
     }
-    res.status(200).json({message: 'usuario autenticado!'})
+    res.status(200).json({usuario})
 
 } )
 

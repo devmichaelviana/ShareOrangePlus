@@ -1,19 +1,21 @@
-.main{
+.main__login{
   display: flex;
   width: 100%;
   flex-grow: 1;
   justify-content: center;
   align-items: center;
-  background:url(../../assets/fundoTela.jpg);
+  background-image:url('../../assets/fundoTela.jpg');
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
 }
+
 .container{
   display: flex;
   height: 100%;
   flex-direction: column;
 }
+
 .wrapper{
   display: flex;
   flex-direction: column;
@@ -117,10 +119,14 @@ input {
   align-items: center;  
 }
 
+.buttons > p{
+  margin-top: 50px;
+}
 .alerta{
   color: #ff0000;
   font-size: 14px;
 }
+
 .rodape{
   width: 100%;
   display: flex;
@@ -132,3 +138,14 @@ input {
   flex-shrink: 0;
 }
 
+@media screen and (max-width: 768px){
+  .main__login{
+    background-image: none;
+    background-color: #fff;
+  }
+
+  .wrapper{
+    border: none;
+    box-shadow: none;
+  }
+}
