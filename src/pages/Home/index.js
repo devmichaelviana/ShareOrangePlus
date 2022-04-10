@@ -58,9 +58,9 @@ function PageHome() {
 
         <section className="cadastrar__centralizar">
           <div className="cadastrar">
-            <button>
+            <button className="buttonCadastro">
               <Link className="cadastro" to="/cadastro">
-                Cadastre-se{' '}
+                Cadastre-se
               </Link>
             </button>
             <p className="title__login">
