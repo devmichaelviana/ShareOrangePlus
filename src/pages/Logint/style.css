@@ -101,7 +101,7 @@ input {
   color: #C4C4C4;
 }
 
-button {
+.buttonLogin {
   width: 187px;
   height: 45px;
   margin-top: 50px;  

@@ -89,7 +89,7 @@ const Login = () =>{
               ) : null }             
             </div>
             <div className="buttons">
-              <button type="submit">Entrar</button>   
+              <button type="submit"   className="buttonLogin">Entrar</button>   
               <p className="esqueceSenha">Esqueceu sua senha??</p>   
             </div>               
           </form>
