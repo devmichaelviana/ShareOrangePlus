@@ -228,7 +228,9 @@ const cadastro = () => {
             </div>
             <p className="status"></p>
             <div className="buttons">
-              <button type="submit">Cadastrar</button>
+              <button type="submit" className="buttonCadastro">
+                Cadastrar
+              </button>
             </div>
             <div>
               <p>Se preferir, faça login com as redes</p>
