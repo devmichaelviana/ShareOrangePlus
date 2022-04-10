@@ -1,4 +1,6 @@
+
 .main-cadastro{
+
   display: flex;
   width: 100%;
   flex-grow: 1;
@@ -48,6 +50,11 @@ margin: 54px 0px 14px 0px;
   font-size: 40px;
   line-height: 48px;
   color: #FE5517;
+}
+
+.texto{
+  margin-bottom: 50px;
+  text-align: center;
 }
 
 .input{
@@ -152,6 +159,7 @@ line-height: 24px;
 .fundoTela{
  margin-right:0px
 }
+
 
 .select{
   width: 319px;

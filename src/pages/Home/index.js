@@ -43,14 +43,15 @@ function PageHome() {
         <section className="cadastrar__centralizar">
           <div className="cadastrar">
             <button><Link className="cadastro" to="/cadastro">Cadastre-se </Link></button> 
-            <p className="title__login">Já possui conta? Faça seu  <Link className="login" to="/login"><strong className="strong1">login aui</strong></Link></p>
+            <p className="title__login">Já possui conta? Faça seu  <Link className="login" to="/login"><strong className="strong1">login aqui</strong></Link></p>
             </div>
         </section>
-
+      </div> {/** centralizar */}
+      <div className="footer__centralizar">
         <footer>
           <img  className="logo" src={LogoFCamara} alt="Logo FCamara" />
         </footer>
-      </div> {/** centralizar */}
+      </div>
     </>
   )
 }

@@ -84,7 +84,9 @@ const cadastro = () =>{
 }
   return (
     <div className="container">      
+
     <main className="main-cadastro">
+
       
       <div className="wrapperCadastro">
       <h2 className="title">Technical.<br/><span className="segundoNome">Share</span></h2>  

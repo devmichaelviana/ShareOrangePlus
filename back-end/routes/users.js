@@ -45,7 +45,7 @@ router.post('/auth/login', async (req, res) =>{
     if(!usuario || usuario.senha !== senha){
         return res.status(404).json({ message: 'login invalido!' })
     }
-    res.status(200).json({message: 'usuario autenticado!'})
+    res.status(200).json({usuario})
 
 } )
 
