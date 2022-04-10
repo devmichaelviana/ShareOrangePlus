@@ -1,11 +1,7 @@
 const mongoose = require('mongoose');
 
 const esquema = mongoose.Schema({
-    name: {
-       type: String,
-       
-    },
-    telefone: {
+    nome: {
        type: String,
        
     },
@@ -17,26 +13,17 @@ const esquema = mongoose.Schema({
         type: String,
         
     },
-    avatar: {
+    contato: {
         type: String,
-        
-    },
-    areaAtuacao: {
-        type: String,
-        
     },
     mentor: {
-        type: Boolean,
-        
-    },
-    mentorado: {
         type: Boolean,
         
     },
     data: {
        type: Date
     },
-    habilidades: [
+    habilidades:[
     ]
  })
 
