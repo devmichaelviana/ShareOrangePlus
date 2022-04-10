@@ -56,6 +56,9 @@ margin: 54px 0px 14px 0px;
   flex-direction: column;  
  
 }
+.status{
+  color: #FE5517;
+}
 
 form {
   display: flex;
@@ -86,7 +89,7 @@ align-items: center;
   font-family: 'Inter';
   font-style: normal;
   font-weight: 400;
-  font-size: 15px;
+  font-size: 15px !important;
   line-height: 30px;
   margin-left: 20px;
 

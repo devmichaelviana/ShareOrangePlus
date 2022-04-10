@@ -3,9 +3,11 @@ import "./style.css";
 import { useFormik } from "formik";
 import { useNavigate } from "react-router-dom";
 import { BsLinkedin, BsGoogle } from "react-icons/bs";
+import * as yup from "yup";
 import { CgEye } from "react-icons/cg";
 import  LogoFCamara  from "../../assets/logoFcamara.png"
 const cadastro = () =>{
+  var status = document.getElementsByClassName("status")[0]
   // eslint-disable-next-line react-hooks/rules-of-hooks
   const navigate = useNavigate();
   // eslint-disable-next-line react-hooks/rules-of-hooks
@@ -18,20 +20,22 @@ const cadastro = () =>{
       mentor: false,
       habilidades: []
     },
+    validationSchema: yup.object({
+      email: yup.string().email('Email Invalido').required("O campo é obrigatório"),
+      senha: yup.string().required("O campo é obrigatório")
+    }),
     onSubmit: async (values) => { 
       if(values.habilidades.length > 0){
         values.mentor = true
         var habilidades = values.habilidades.split(',')
-  
       }
       var nome = values.nome
       var email = values.email
       var senha = values.senha
       var contato = values.contato
       var mentor = values.mentor
-      console.log(habilidades)
       const item = {nome,email,senha,contato,mentor,habilidades}
-      console.log('os item', item)
+      status.innerText = 'Carregando....'
       let result = await fetch("http://localhost:8080/users/auth/register",{
         method: "POST",
         headers: {
@@ -40,19 +44,21 @@ const cadastro = () =>{
         },
         body: JSON.stringify(item)
       });
-      console.log(result);
-      if(result === undefined){
-        console.log('isso')
-      }
-      console.log('result', result.status);
+      console.log('resulte', result.status)
       if(result.status === 201) {
         result = await result.json();
         localStorage.setItem("user-info", JSON.stringify(result))
         navigate("/perfil")
       }
-      // else {
-      //   error.innerText = 'Login invalido'
-      // }
+      else if(result.status === 400){
+        status.innerText = "Campos invalidos!"
+      }
+      else if(result.status === 422){
+        status.innerText = "Usuario ja cadastrado!"
+      }
+      else if(result.status === 500){
+        status.innerText = "Error no servidor"
+      }
     },
 
     
@@ -196,7 +202,10 @@ const cadastro = () =>{
             ) : null }                 
           </div>
           </div>
-          </div>           
+          </div>   
+          <p className="status">
+              
+          </p>       
           <div className="buttons">
             <button type="submit">Cadastrar</button>    
           </div> 

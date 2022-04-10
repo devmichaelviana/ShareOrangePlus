@@ -16,8 +16,8 @@ router.post('/auth/register', async (req, res) => {
         data: new Date(),
     }
 
-    if(!nome){
-       res.status(422).json({error: 'o name é obrigatorio!'}) 
+    if(!nome && !email && !senha) {
+       res.status(400).json({error: 'campos é obrigatorio!'}) 
        return
     }
 
