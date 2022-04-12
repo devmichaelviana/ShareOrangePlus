@@ -47,7 +47,6 @@ const cadastro = () => {
         },
         body: JSON.stringify(item),
       });
-      console.log('resulte', result.status);
       if (result.status === 201) {
         result = await result.json();
         localStorage.setItem('user-info', JSON.stringify(result));
@@ -72,7 +71,6 @@ const cadastro = () => {
 
   function show() {
     var areaMentor = document.getElementsByClassName('areaMentor');
-    console.log(areaMentor[0].style.display);
     if (areaMentor[0].style.display === 'block') {
       areaMentor[0].style.display = 'none';
     } else {
