@@ -16,7 +16,7 @@ const Login = () =>{
     },
     validationSchema: yup.object({
       email: yup.string().email('Email Invalido').required("O campo é obrigatório"),
-      password: yup.string().required("O campo é obrigatório").min(8, "Mínimo de 8 caracteres").max(12, "Máximo de 12 caracteres"),
+      password: yup.string().required("O campo é obrigatório"),
     }),
     onSubmit: async (values) => { 
       // alert(JSON.stringify(values, null, 2))
@@ -32,11 +32,8 @@ const Login = () =>{
         },
         body: JSON.stringify(item)
       });
-      console.log(result);
-      if(result === undefined){
-        console.log('isso')
-      }
-      console.log('result', result.status);
+
+
       if(result.status === 200) {
         result = await result.json();
         localStorage.setItem("user-info", JSON.stringify(result))
