@@ -39,7 +39,7 @@ const cadastro = () => {
       var mentor = values.mentor;
       const item = { nome, email, senha, contato, mentor, habilidades };
       status.innerText = 'Carregando....';
-      let result = await fetch('http://localhost:8080/users/auth/register', {
+      let result = await fetch('https://backend-technicalshare.herokuapp.com/users/auth/register', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
