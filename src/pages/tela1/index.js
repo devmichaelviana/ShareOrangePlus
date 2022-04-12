@@ -26,7 +26,7 @@ function  Principal (){
   // buscar todos mentores cadastrados
   const [mentores, setMentores] = useState([]);
   useEffect(()=> {
-     fetch("http://localhost:8080/users/mentores")
+     fetch("https://backend-technicalshare.herokuapp.com/users/mentores")
     .then(res => res.json())
     .then(
       (result) => {
@@ -43,19 +43,19 @@ function  Principal (){
   const [mentoresHabilidades, setMentoresHabilidades] = useState([]);
     function habilidades(val){
      let habilidade = val.target.value
-  fetch(`http://localhost:8080/users/buscar/${habilidade}`)
+  fetch(`https://backend-technicalshare.herokuapp.com/users/buscar/${habilidade}`)
   .then(res => res.json())
   .then(
     (result) => {
       // tracar para ocutar img e mostrar lista de mentores
       if(result.length){
-        var img = document.getElementsByClassName('image')[0]
+        var img = document.getElementsByClassName('image-principal')[0]
         img.style.display = 'none'
         var card = document.getElementsByClassName('card-habilidade')[0]
         card.style.display = 'block'
         setMentoresHabilidades(result)
       } else{
-        var img2 = document.getElementsByClassName('image')[0]
+        var img2 = document.getElementsByClassName('image-principal')[0]
         img2.style.display = 'block'
         var card2 = document.getElementsByClassName('card-habilidade')[0]
         card2.style.display = 'none'

@@ -24,7 +24,7 @@ const Login = () =>{
       const senha = values.password
       const item = {email,senha}
       error.innerText = 'Carregando ....'
-      let result = await fetch("http://localhost:8080/users/auth/login",{
+      let result = await fetch("https://backend-technicalshare.herokuapp.com/users/auth/login",{
         method: "POST",
         headers: {
           "Content-Type":"application/json",
