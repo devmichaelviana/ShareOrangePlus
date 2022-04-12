@@ -1,10 +1,10 @@
 import React from 'react';
 import Modal from '../Modal';
 import { ReactComponent as Email } from '../../assets/iconEmail.svg';
-import { ReactComponent as Whats } from '../../assets/iconWhatsaoo.svg';
+// import { ReactComponent as Whats } from '../../assets/iconWhatsaoo.svg';
 import './style.css';
 
-const ModalMentorInformacoes = ({ modal, setModal }) => {
+const ModalMentorInformacoes = ({ modal, setModal, infor }) => {
   return (
     <Modal isOpen={modal} onClose={() => setModal(false)}>
       <div className="containerModal">
@@ -21,7 +21,7 @@ const ModalMentorInformacoes = ({ modal, setModal }) => {
               alt=""
             />
             <div className="detalheDados">
-              <p>Maria Oliveira Silveira</p>
+              <p>{infor.nome}</p>
               <p>Desenvolvedora Full-Stack</p>
             </div>
           </div>
@@ -29,12 +29,12 @@ const ModalMentorInformacoes = ({ modal, setModal }) => {
           <div className="containerContatoMentor">
             <div className="contatoMentor">
               <Email />
-              <p className="textoContatoMentor">mariaoliveira@email.com.br</p>
+              <p className="textoContatoMentor">{infor.email}</p>
             </div>
-            <div className="contatoMentor">
+            {/* <div className="contatoMentor">
               <Whats />
               <p className="textoContatoMentor">(77) 7777-77777</p>
-            </div>
+            </div> */}
           </div>
 
           <p className="textoInformativo">

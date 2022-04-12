@@ -4,6 +4,7 @@ import Home from '../pages/Home';
 import PageLogin from '../pages/Logint';
 import PageCadastro from '../pages/Cadastro';
 import ModalExemplos from '../pages/ModalExemplos';
+import Tela from '../pages/tela1/index'
 
 function routes() {
   return (
@@ -11,7 +12,8 @@ function routes() {
       <Route path="/" element={<Home />} />
       <Route path="/login" element={<PageLogin />} />
       <Route path="/cadastro" element={<PageCadastro />} />
-      <Route path="/modal" element={<ModalExemplos />} />
+      {/* <Route path="/modal" element={<ModalExemplos />} /> */}
+      <Route path="/perfil" element={<Tela />} />
     </Routes>
   );
 }
