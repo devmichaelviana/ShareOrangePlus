@@ -37,7 +37,7 @@
   font-size: 40px;
   line-height: 48px;
   color: #FE5517;
-margin: 54px 0px 64px 0px;
+  margin: 54px 0px 64px 0px;
 }
 
 .segundoNome{
@@ -52,17 +52,14 @@ margin: 54px 0px 64px 0px;
   display: flex;
   gap: 5px;
   flex-direction: column;  
- 
 }
 
-form {
+form{
   display: flex;
   gap: 39px;
   flex-direction: column;
   align-items: center;
 }
-
-
 
 .esqueceSenha{
   font-family: 'Inter';
@@ -89,7 +86,7 @@ form {
   margin-left: 20px;
 }
 
-input {
+input{
   width: 319px;
   height: 50px;
   background: #FFFFFF;
@@ -101,7 +98,7 @@ input {
   color: #C4C4C4;
 }
 
-.buttonLogin {
+.buttonLogin{
   width: 187px;
   height: 45px;
   margin-top: 50px;  
@@ -122,6 +119,7 @@ input {
 .buttons > p{
   margin-top: 50px;
 }
+
 .alerta{
   color: #ff0000;
   font-size: 14px;

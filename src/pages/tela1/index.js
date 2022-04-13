@@ -108,7 +108,7 @@ return(
       <main className="centralizar__conteudo">  
         <section className="principal">
           <div className="parte-mentorado">
-          <div className="apresentacao">
+          <div className="apresentacao__perfil">
             <h2>Encontre seu próximo mentor</h2>
             <p>Hoje é um dia perfeito para o seu crescimento profissional</p>
           </div>
@@ -130,7 +130,7 @@ return(
         </div>
           </div>
           <div className="parte-mentor">
-          <div className="apresentacao">
+          <div className="apresentacao__perfil">
             <h2>Compartilhe seu conhecimento</h2>
             <p>Ajude outros profissionais a crescerem em suas carreiras</p>
           </div>

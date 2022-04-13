@@ -98,7 +98,7 @@
     align-items: center;       
 }
 
-.apresentacao{
+.apresentacao__perfil{
     margin: 0 auto;
     display: flex;
     flex-direction: column;
@@ -161,7 +161,7 @@
 
 footer{
     height: 40px;
-    background-color: #fb6028;
+    background-color: #fff;
 }
 
 .centralizar__footer{

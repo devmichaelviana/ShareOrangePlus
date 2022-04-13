@@ -99,7 +99,7 @@ const cadastro = () => {
                 onChange={formik.handleChange}
                 onBlur={formik.handleBlur}
                 value={formik.values.nome}
-                placeholder="Nome"
+                placeholder="Digite seu nome..."
               />
               {formik.touched.nome && formik.errors.nome ? (
                 <span className="alerta">{formik.errors.nome}</span>
@@ -117,7 +117,7 @@ const cadastro = () => {
                 onChange={formik.handleChange}
                 onBlur={formik.handleBlur}
                 value={formik.values.email}
-                placeholder="@email"
+                placeholder="Digite seu email..."
               />
               {formik.touched.email && formik.errors.email ? (
                 <span className="alerta">{formik.errors.email}</span>
@@ -127,7 +127,7 @@ const cadastro = () => {
             <div className="input">
               <div className="inputSenha">
                 <label className="tituloInput" htmlFor="">
-                  Digete Sua Senha:
+                  Senha
                 </label>
                 <div className="mostrarSenha">
                   <input
@@ -138,7 +138,7 @@ const cadastro = () => {
                     onChange={formik.handleChange}
                     onBlur={formik.handleBlur}
                     value={formik.values.senha}
-                    placeholder="Senha"
+                    placeholder="Digite sua senha..."
                     className="senha"
                   ></input>
                   <CgEye className="olho" onClick={mostrarSenha} />

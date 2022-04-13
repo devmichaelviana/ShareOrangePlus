@@ -1,6 +1,7 @@
 import React, {useState} from "react";
 import "./style.css";
 import { useFormik } from "formik";
+import { Link } from "react-router-dom";
 import * as yup from "yup";
 import { useNavigate } from "react-router-dom";
 import  LogoFCamara  from "../../assets/logoFcamara.png";
@@ -86,7 +87,7 @@ const Login = () =>{
               ) : null }             
             </div>
             <div className="buttons">
-              <button type="submit"   className="buttonLogin">Entrar</button>   
+              <button type="submit" className="buttonLogin">Entrar</button>
               <p className="esqueceSenha">Esqueceu sua senha??</p>   
             </div>               
           </form>
@@ -101,4 +102,4 @@ const Login = () =>{
   )
 }
 
-export default Login
+export default Login;

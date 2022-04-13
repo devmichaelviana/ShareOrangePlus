@@ -1,18 +1,14 @@
-
 .main-cadastro{
-
   display: flex;
   width: 100%;
   flex-grow: 1;
   justify-content: center;
   align-items: center;
-  background:url(../../assets/fundoTela.jpg);
+  background-image:url('../../assets/fundoTela.jpg');
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
 }
-
-
 
 .container{
   display: flex;
@@ -32,7 +28,6 @@
   border: 1px solid rgba(0, 0, 0, 0.15);
   box-sizing: border-box;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-  border-radius: 15px;
 }
 
 .title{
@@ -61,20 +56,18 @@ margin: 54px 0px 14px 0px;
   display: flex;
   gap: 5px;
   flex-direction: column;  
- 
-}
+ }
+
 .status{
   color: #FE5517;
 }
 
-form {
+form{
   display: flex;
   gap: 9px;
   flex-direction: column;
   align-items: center;
 }
-
-
 
 .esqueceSenha{
   font-family: 'Inter';
@@ -91,7 +84,7 @@ form {
 
 .tituloInput{
   display: flex;
-align-items: center;
+  align-items: center;
   color:#000;
   font-family: 'Inter';
   font-style: normal;
@@ -99,10 +92,9 @@ align-items: center;
   font-size: 15px !important;
   line-height: 30px;
   margin-left: 20px;
-
 }
 
-input {
+input{
   width: 319px;
   height: 50px;
   background: #FFFFFF;
@@ -110,7 +102,7 @@ input {
   border-radius: 30px;
 }
 
-.buttonCadastro {
+.buttonCadastro{
   width: 187px;
   height: 45px;
   margin-top: 50px;  
@@ -132,6 +124,7 @@ input {
   color: #ff0000;
   font-size: 14px;
 }
+
 .rodape{
   width: 100%;
   display: flex;
@@ -145,21 +138,20 @@ input {
 
 .texto{
   width: 270px;
-height: 25px;
-margin-left: 5px;
-top: 261px;
-color: #404098;
-font-family: 'Inter';
-font-style: normal;
-font-weight: 500;
-font-size: 20px;
-line-height: 24px;
+  height: 25px;
+  margin-left: 5px;
+  top: 261px;
+  color: #404098;
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 24px;
 }
 
 .fundoTela{
- margin-right:0px
+  margin-right:0px
 }
-
 
 .select{
   width: 319px;
@@ -182,7 +174,7 @@ line-height: 24px;
   text-align: center;
 }
 
-.olho {
+.olho{
   cursor: pointer;
   width: 35px;
   left: 280px;
@@ -191,6 +183,7 @@ line-height: 24px;
   font-size: 18px;
   position: absolute;
 }
+
 .mostrarSenha{
   display: flex;
 }
@@ -199,6 +192,7 @@ line-height: 24px;
   left: 365px;
   position: sticky;
 }
+
 .areaMentor{
   display: none;
 }
@@ -233,7 +227,8 @@ input[type=checkbox]{
 .input-area-mentor{
   margin-top: 15px;
 }
-.Toggle {
+
+.Toggle{
 	cursor: pointer;
 	text-indent: -9999px;
 	width: 52px;
@@ -246,7 +241,7 @@ input[type=checkbox]{
   top: -4px;
 }
 
-.Toggle:after {
+.Toggle:after{
 	content: '';
 	position: absolute;
 	top: 3px;
@@ -258,7 +253,7 @@ input[type=checkbox]{
 	transition: 0.3s;
 }
 
-input:checked + .Toggle {
+input:checked + .Toggle{
 	background: #FE662E !important;
 }
 
@@ -270,7 +265,8 @@ input:checked + label:after {
 label:active:after {
 	width: 45px;
 }
-@media (max-width: 600px) {
+
+@media (max-width: 600px){
   .inputSenha{
     left: 0;
   }
@@ -280,6 +276,7 @@ label:active:after {
   .main-cadastro{
     background: #fff;
   }
+  
   .wrapperCadastro{
     border: none;
     box-shadow: none;
