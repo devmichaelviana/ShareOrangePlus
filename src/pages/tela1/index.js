@@ -91,7 +91,7 @@ return(
       <header className="centralizar__principal">
         <section>
           <div className="topo__cabecalho">
-            <h1>Share<br/><strong>Orange +</strong></h1>
+            <h1>Share<br/><strong>Orange+</strong></h1>
             <FiLogOut className="logout" onClick={sair}/>       
           </div>
           <div className="fundo__cabecalho">

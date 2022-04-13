@@ -82,9 +82,9 @@ const cadastro = () => {
       <main className="main-cadastro">
         <div className="wrapperCadastro">
           <h2 className="title">
-            Technical.
+            Share
             <br />
-            <span className="segundoNome">Share</span>
+            <span className="segundoNome">Orange+</span>
           </h2>
           <form onSubmit={formik.handleSubmit} noValidate>
             <div className="input">

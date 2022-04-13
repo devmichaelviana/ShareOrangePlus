@@ -52,7 +52,7 @@ const Login = () =>{
     <div className="container">      
       <main className="main__login">  
         <div className="wrapper">
-        <h2 className="title">Technical.<br/><span className="segundoNome">Share</span></h2>    
+        <h2 className="title">Share<br/><span className="segundoNome">Orange+</span></h2>    
            <form onSubmit={formik.handleSubmit} noValidate >
                                       
             <div className="input">
