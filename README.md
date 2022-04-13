@@ -1,70 +1,40 @@
-# Getting Started with Create React App
+# ShareOrange+
+A ShareOrange+ (projeto, layout e execução), é um proposta executada pela squad 11 do Hackathon da [FCamara](https://digital.fcamara.com.br/programadeformacao).
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## 💻 Projeto
+ A ShareOrange+ é uma solução que conecta profissionais de tecnologia de todos os níveis de experiência para compartilharem conhecimento não só técnico mas também de carreira tendo em mente que a rotina desses profissionais é de agenda cheia. Essas informações foram possíveis ser adquiridas pelo uso da [API](https://backend-technicalshare.herokuapp.com/users/auth/register).
 
-## Available Scripts
 
-Como rodar o nosso projeto:
+### Funcionalidades
 
-### `npm start`
+ - [x] **Cadastro**: Cadastro de mentores ou mentorados;
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+ - [x] **Login**: Acesso de mentores e mentorados pós cadastro;
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+ - [x] **Busca de mentores**: Método para filtrar os mentores a partir da sua área de atuação.
 
-### `npm test`
+ - [x] **Seção mentorado**: Informações de mentores disponíveis, tai como: área de atuação, e-mail;
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `npm run build`
+## 📥 Instalação e execução
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Faça um clone desse repositório.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+```bash
+$ git clone https://github.com/devmichaelviana/ShareOrangePlus 
+```
+```bash
+# Instalando as dependências
+$ npm install
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+# Executanto aplicação
+$ npm run start
 
-### `npm run eject`
+# Tecnologia usada
+$ ReactJs
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+```
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## 📝 Licença
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Esse projeto está sob a licença MIT. Veja o arquivo [LICENSE](LICENSE.md) para mais detalhes.
