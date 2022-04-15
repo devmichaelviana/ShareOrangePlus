@@ -33,6 +33,8 @@ $ npm run start
 # Tecnologia usada
 $ ReactJs
 
+Link do deploy do front-end
+https://jovial-basbousa-ab35a6.netlify.app/
 ```
 
 ## 📝 Licença
